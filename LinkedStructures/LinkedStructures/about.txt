@@ -1,0 +1,18 @@
+--------------------------------------------------------------------
+|                                                                  |
+|       \`\/\/\/`/        ,-.                 ,    ,-.             |
+|        )======(         |  )               '|   /  /\            |
+|      .'        '.       |-<  ,-: ,-:   . ,  |   | / |            |
+|     /            \      |  ) | | | |   |/   |   \/  /            |
+|    /              \     `-'  `-` `-|   '    ' o  `-'             |
+|   |                |             `-'                             |
+|   '.              .'    By Daniel Ball:                          |
+|     '------------'        daniel.s.ball@gmail.com                |
+|                             CSC-161, Spring 2013                 |
+|                                                                  |
+--------------------------------------------------------------------
+|  Creates three bags which store integers, strings, and a         |
+|  trip class. Provides a user menu which provides functionality   |
+|  for manipulating the contents of each container.                |
+|                                                                  |
+--------------------------------------------------------------------
