@@ -7,26 +7,27 @@
 
 struct node
 {
-	string name;
-	string weapon;
-	string armor;
+	int num1;
+	int num2;
+	int num3;
 	node* next;
 };
 
 class Stack
 {
 	private:
-		nodeptr head;
-		nodeptr tail;
-		nodeptr current;
+		node* head;
+		node* current;
+		bool first;
 	public:
 		Stack();
-		Stack Push();
-		Stack Pop();
-		void List();
+		void push();
+		void pop();
+		void list();
 		~Stack();
 };
 
-typedef node* nodeptr;
+
+
 
 #endif

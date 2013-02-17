@@ -61,7 +61,7 @@ int Menu::getChoice()
 		cin.clear();
 		cin.sync();
 		cin>>choice;
-		if(cin.fail() || (choice<=0 || choice>7) )
+		if(cin.fail() || choice<=0 )
 		{
 			cout<<"Invalid choice. ";
 			continue;

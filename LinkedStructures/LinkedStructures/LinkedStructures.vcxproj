@@ -10,6 +10,21 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="driver.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="stack.cpp" />
+    <ClCompile Include="utiliity.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="stack.h" />
+    <ClInclude Include="utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="about.txt" />
+    <None Include="goodbye.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D87E4103-976C-4B3B-B804-EEE1028B7557}</ProjectGuid>
     <RootNamespace>LinkedStructures</RootNamespace>
@@ -59,8 +74,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
