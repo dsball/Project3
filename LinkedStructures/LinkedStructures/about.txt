@@ -1,18 +1,16 @@
 --------------------------------------------------------------------
 |                                                                  |
-|       \`\/\/\/`/        ,-.                 ,    ,-.             |
-|        )======(         |  )               '|   /  /\            |
-|      .'        '.       |-<  ,-: ,-:   . ,  |   | / |            |
-|     /            \      |  ) | | | |   |/   |   \/  /            |
-|    /              \     `-'  `-` `-|   '    ' o  `-'             |
-|   |                |             `-'                             |
-|   '.              .'    By Daniel Ball:                          |
-|     '------------'        daniel.s.ball@gmail.com                |
-|                             CSC-161, Spring 2013                 |
+|             _/_/_/    _/                          _/             |
+|           _/        _/_/_/_/    _/_/_/    _/_/_/  _/  _/         |
+|            _/_/      _/      _/    _/  _/        _/_/            |
+|               _/    _/      _/    _/  _/        _/  _/           |
+|        _/_/_/        _/_/    _/_/_/    _/_/_/  _/    _/          |
 |                                                                  |
+|     By Daniel Ball:                                              |
+|         daniel.s.ball@gmail.com                                  |
+|             CSC-161, Spring 2013                                 |
 --------------------------------------------------------------------
-|  Creates three bags which store integers, strings, and a         |
-|  trip class. Provides a user menu which provides functionality   |
-|  for manipulating the contents of each container.                |
-|                                                                  |
+|    Creates a data stack which holds three integers. Allows the   |
+|    user to a node to the stack or remove the last node added.    |
+|    The user may also list the contents of the stack.             |
 --------------------------------------------------------------------

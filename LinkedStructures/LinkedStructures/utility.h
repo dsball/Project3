@@ -39,6 +39,8 @@ using std::setw;
 using std::to_string;
 using std::string;
 using std::left;
+using std::ostream;
+using std::istream;
 
 void pause();
 bool printFile(string);

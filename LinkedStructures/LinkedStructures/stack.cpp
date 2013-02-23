@@ -1,6 +1,6 @@
 #include "stack.h"
 
-
+//default constructor, initializes stack  
 Stack::Stack()
 {
 	head = new node;
@@ -9,8 +9,14 @@ Stack::Stack()
 	first = true;
 }
 
-void Stack::push()
+//first instance: adds data to the head, all future: adds new node and data
+
+
+
+//void Stack::push()
+Stack Stack::operator+(node tempNode)
 {
+
 	if(first == true)
 	{
 		current = head;
@@ -23,30 +29,12 @@ void Stack::push()
 		head = current;
 	}
 
-	cout<<"Enter num1: ";
-	while(!(cin>>current->num1))
-	{
-		cin.clear();
-		cin.sync();
-		cout<<"Error inputting num1, try again: ";
-	}
-	cout<<"Enter num2: ";
-	while(!(cin>>current->num2))
-	{
-		cin.clear();
-		cin.sync();
-		cout<<"Error inputting num2, try again: ";
-	}
-	cout<<"Enter num3: ";
-	while(!(cin>>current->num3))
-	{
-		cin.clear();
-		cin.sync();
-		cout<<"Error inputting num3, try again: ";
-	}
+	current = &tempNode;
 }
 
+//removes first node from the stack
 void Stack::pop()
+
 {
 	current = head;
 	head = current->next;
@@ -54,17 +42,18 @@ void Stack::pop()
 	cout<<"Node deleted.";
 }
 
-void Stack::list()
+// lists data for each node in the stack
+ostream& operator<<(ostream& stackOut, const Stack& stackIn)
 {
-	current = head;
-	while(current != nullptr)
+	while(stackIn.current != nullptr)
 	{
-		cout<<setw(15)<<current->num1<<setw(15)<<current->num2<<setw(15)<<current->num3<<endl;
+		stackOut<<setw(15)<<stackIn.current->num1<<setw(15)<<stackIn.current->num2<<setw(15)<<stackIn.current->num3<<endl;
 		current = current->next;
 	}
-	pause();
+	return stackOut;
 }
 
+//successively deletes nodes before closing an instance of the class
 Stack::~Stack()
 {
 	current = head;
@@ -73,3 +62,4 @@ Stack::~Stack()
 		pop();
 	}
 }
+

@@ -1,3 +1,31 @@
+/*------------------------------------stack.h
+Purpose: provides general utility functions, headers, and generic using declarations.
+
+--- Member Data ---
+Name            Type           Description
+-------------------------------------------------------------------------------------------
+node			struct			data structure for making stack
+num1            int             placeholder data member
+num2            int             placeholder data member
+num3            int             placeholder data member
+next			node pointer    pointer to next node
+
+head            node pointer    pointer to stack head
+current         node pointer    pointer to current node
+first           bool		    used to populate first node before generating new nodes
+
+
+--- Functions ---
+Name              Return    Description; Parameter description
+--------------------------------------------------------------------------------------------
+Stack()           none      default constructor, initializes stack   
+push()            void      first instance: adds data to the head, all future: adds new node and data
+pop()             void      removes first node from the stack
+list()            void      lists data for each node in the stack
+~Stack()          none      successively deletes nodes before closing an instance of the class
+
+*/
+
 #ifndef _STACK_INTERFACE_
 #define _STACK_INTERFACE_
 
@@ -21,9 +49,13 @@ class Stack
 		bool first;
 	public:
 		Stack();
-		void push();
 		void pop();
-		void list();
+		//void push();
+		Stack operator +(Stack);
+		Stack operator +=(Stack);
+		//void list();
+		friend ostream operator<< ();
+		friend istream operator>> ();
 		~Stack();
 };
 
