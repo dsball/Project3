@@ -51,11 +51,10 @@ class Stack
 		Stack();
 		void pop();
 		//void push();
-		Stack operator +(Stack);
-		Stack operator +=(Stack);
-		//void list();
-		friend ostream operator<< ();
-		friend istream operator>> ();
+		Stack& operator +(node);
+		Stack& operator +=(node);
+		void list();
+		friend ostream& operator<<(ostream& , const Stack&);
 		~Stack();
 };
 
@@ -63,3 +62,6 @@ class Stack
 
 
 #endif
+
+//----------------------------------------------------------------------------------------------------------------------
+

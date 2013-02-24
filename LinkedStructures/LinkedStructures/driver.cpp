@@ -12,6 +12,8 @@ int main()
 {
 	Menu menuA;
 	int choice = 0;
+	Stack tempStack;
+	node tempNode;
 
 	if(!printFile("about.txt"))
 	{
@@ -32,13 +34,36 @@ int main()
 		switch(choice)
 		{
 		case 1:
-			stackList.push();
+			cout<<"Enter num1: ";
+			while(!(cin>>tempNode.num1))
+			{
+				cin.clear();
+				cin.sync();
+				cout<<"Error inputting num1, try again: ";
+			}
+			cout<<"Enter num2: ";
+			while(!(cin>>tempNode.num2))
+			{
+				cin.clear();
+				cin.sync();
+				cout<<"Error inputting num2, try again: ";
+			}
+			cout<<"Enter num3: ";
+			while(!(cin>>tempNode.num3))
+			{
+				cin.clear();
+				cin.sync();
+				cout<<"Error inputting num3, try again: ";
+			}
+			tempNode.next = nullptr;
+			stackList += tempNode;
 			break;
 		case 2:
 			stackList.pop();
 			break;
 		case 3:
-			stackList.list();
+			cout<<stackList;
+			pause();
 			break;
 		case 4:
 			break;
