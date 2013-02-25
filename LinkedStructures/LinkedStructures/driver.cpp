@@ -34,6 +34,10 @@ int main()
 		switch(choice)
 		{
 		case 1:
+			//The lab says to do data entry in the push function; however, I had to change for the operator+ modification:
+			//I did data input in the driver because of the operator+ overload ... I had to have something to add to the class. I could have loaded an empty node
+			//and filled it in the class, but that would have been unnecessarily obfuscated code ... i.e. unless it was known
+			//that it was being entered at that point, it would be difficult to see what was being added to the stack.
 			cout<<"Enter num1: ";
 			while(!(cin>>tempNode.num1))
 			{
@@ -56,8 +60,10 @@ int main()
 				cout<<"Error inputting num3, try again: ";
 			}
 			tempNode.next = nullptr;
+
 			stackList += tempNode;
 			break;
+
 		case 2:
 			stackList.pop();
 			break;
