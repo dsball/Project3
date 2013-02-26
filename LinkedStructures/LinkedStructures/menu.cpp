@@ -1,6 +1,14 @@
 #include "menu.h"
 #include "uimanip.h"
 
+static const WORD colors[] = 
+{
+	0x1A, 0x2B, 0x3C, 0x4D, 0x5E, 0x6F,
+	0xA1, 0xB2, 0xC3, 0xD4, 0xE5, 0xF6
+};
+
+static const enum color {A,B,C,D,E,F,G,H,I,J,K,L};
+
 //default class constructor
 Menu::Menu()
 {
@@ -56,7 +64,7 @@ int Menu::getChoice()
 	for(int i = 0; i<numEntries;i++)
 	{
 		cout<<"\t";
-		cSet(A);
+		cSet(colors[A]);
 		cout<<i+1<<": "<<menuEntries[i];
 		cRestoreInit();
 		cout<<endl;

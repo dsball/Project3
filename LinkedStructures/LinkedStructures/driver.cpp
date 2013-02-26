@@ -4,19 +4,93 @@ CSC 161 Lab 1
 
 */
 
+
 #include "menu.h"
 #include "utility.h"
 #include "stack.h"
-//#include "uimanip.h"
+#include "uimanip.h"
+
+
+static const WORD colors[] = 
+{
+	0x01, 0x02, 0x03, 0x04, 0x05, 0x06,
+	0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C,
+	0x0D, 0x0E, 0x0F
+};
+
 
 int main()
 {
-	/*cGotoxy(5,5);
-	cout<<"TESTING";
-	Sleep(1000);
-	cGotoxy(5,5);
-	cout<<"WINNNING!";
-	pause();*/
+	int a = 1;
+	int b = 5;
+	int i = 0;
+	bool aup = true;
+	bool bup = true;
+
+	while(true)
+	{
+		
+		if(i%10 == 0)
+		{
+			cSet(i);
+			if(i == 15) i = 0;
+		}
+
+
+		cGotoxy(a,b);
+		Sleep(50);
+		cout<<"+";
+		if(aup == true && a<=25)
+		{
+			if(a!=25)
+			{
+				a++;
+			}
+			else
+			{
+				aup = false;
+				a--;
+			}
+		}
+		else
+		{
+			if(a == 0)
+			{
+				aup = true;
+				a++;
+			}
+			else
+			{
+				a--;
+			}
+		}
+		if(bup == true && b<=20)
+		{
+			if(b!=20)
+			{
+				b++;
+			}
+			else
+			{
+				bup = false;
+				b--;
+			}
+		}
+		else
+		{
+			if(b == 0)
+			{
+				bup = true;
+				b++;
+			}
+			else
+			{
+				b--;
+			}
+		}
+		i++;
+		
+	}
 
 
 	Menu menuA;
