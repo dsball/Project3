@@ -7,9 +7,18 @@ CSC 161 Lab 1
 #include "menu.h"
 #include "utility.h"
 #include "stack.h"
+//#include "uimanip.h"
 
 int main()
 {
+	/*cGotoxy(5,5);
+	cout<<"TESTING";
+	Sleep(1000);
+	cGotoxy(5,5);
+	cout<<"WINNNING!";
+	pause();*/
+
+
 	Menu menuA;
 	int choice = 0;
 	Stack tempStack;
@@ -20,8 +29,8 @@ int main()
 		cout<<"ERROR READING WELCOME FILE\n";
 	}
 	pause();
-
 	Stack stackList;
+
 
 	menuA.addItem("Push");
 	menuA.addItem("Pop");

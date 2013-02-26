@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "uimanip.h"
 
 //default class constructor
 Menu::Menu()
@@ -49,15 +50,20 @@ void Menu::addItem(string item)
 //adds a menu item to the menu
 int Menu::getChoice()
 {
+	cInit();
 	system("CLS");
 	cout<< "\n\n\t\t"<<title<<endl<<endl;
 	for(int i = 0; i<numEntries;i++)
 	{
-		cout<<"\t"<<i+1<<": "<<menuEntries[i]<<endl;
+		cout<<"\t";
+		cSet(A);
+		cout<<i+1<<": "<<menuEntries[i];
+		cRestoreInit();
+		cout<<endl;
 	}
 	while(true)
 	{
-		cout<<"\n\tPlease enter your choice: ";
+		cout<<"\n\tPlease select your choice: ";
 		cin.clear();
 		cin.sync();
 		cin>>choice;

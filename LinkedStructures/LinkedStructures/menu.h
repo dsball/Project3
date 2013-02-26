@@ -30,7 +30,6 @@ addItem(string)   void       adds a menu item to the menu
 
 */
 
-
 #ifndef _MENU_INTERFACE_
 #define _MENU_INTERFACE_
 
