@@ -1,16 +1,14 @@
 --------------------------------------------------------------------
 |                                                                  |
-|             _/_/_/    _/                          _/             |
-|           _/        _/_/_/_/    _/_/_/    _/_/_/  _/  _/         |
-|            _/_/      _/      _/    _/  _/        _/_/            |
-|               _/    _/      _/    _/  _/        _/  _/           |
-|        _/_/_/        _/_/    _/_/_/    _/_/_/  _/    _/          |
+|     STACK AND DERIVED QUEUE                                      |
 |                                                                  |
 |     By Daniel Ball:                                              |
-|         daniel.s.ball@gmail.com                                  |
-|             CSC-161, Spring 2013                                 |
+|     daniel.s.ball@gmail.com                                      |
+|     CSC-161, Spring 2013                                         |
+|                                                                  |
 --------------------------------------------------------------------
-|    Creates a data stack which holds three integers. Allows the   |
-|    user to a node to the stack or remove the last node added.    |
-|    The user may also list the contents of the stack.             |
+|    Creates a data stack and data queue, each holds nodes         |
+|    consisting of three integers. Menu options allow the          |
+|    user to add add to, remove from, or list the contents of      |
+|    each data structure.                                          |
 --------------------------------------------------------------------

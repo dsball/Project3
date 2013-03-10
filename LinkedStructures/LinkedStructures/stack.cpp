@@ -1,34 +1,24 @@
 #include "stack.h"
 
+
 //default constructor, initializes stack  
 Stack::Stack()
 {
-	head = new node;
-	current = head;
-	head->next = nullptr;
-	first = true;
+	head = nullptr;
 }
 
 //first instance: adds data to the head, all future: adds new node and data
-Stack& Stack::operator+(node tempNode)
+Stack& Stack::operator+(node* tempNode)
 {
-	if(first == true)
-	{
-		*head = tempNode;
-		first = false;
-	}
-	else
-	{
-		current = new node;
-		*current = tempNode;
-		current->next = head;
-		head = current;
-	}
+	node* current = new node;
+	current = tempNode;
+	current->next = head;
+	head = current;
 	return *this;
 }
 
 //uses + operator overload to create += operator overload
-Stack& Stack::operator+=(node tempNode)
+Stack& Stack::operator+=(node* tempNode)
 {
 	*this = *this + tempNode;
 	return *this;
@@ -36,12 +26,11 @@ Stack& Stack::operator+=(node tempNode)
 
 //removes first node from the stack
 void Stack::pop()
-
 {
-	current = head;
-	head = current->next;
+	node* current = head;
+	head = head->next;
+	cout<<"Deleting "<<current->num1<<endl;
 	delete current;
-	cout<<"Node deleted.";
 }
 
 // lists data for each node in the stack
@@ -60,10 +49,49 @@ ostream& operator<<(ostream& stackOut, const Stack& stackIn)
 //successively deletes nodes before closing an instance of the class
 Stack::~Stack()
 {
-	current = head;
-	while(head!= nullptr)
+	cout<<"Freeing memory...";
+	node* current;
+	while(head)
 	{
-		pop();
+		current = head;
+		head = head->next;
+		cout<<"Deleting "<<current->num1<<endl;
+		delete current;
 	}
 }
 
+node* Stack::makeNode()
+{
+	node* tempNode = nullptr;
+	tempNode = new node;
+	if(!tempNode)
+	{
+		cout<<"Out of memory!";
+		exit(0);
+	}
+
+	
+	cout<<"Enter num1: ";
+	while(!(cin>>tempNode->num1))
+	{
+		cin.clear();
+		cin.sync();
+		cout<<"Error inputting num1, try again: ";
+	}
+	cout<<"Enter num2: ";
+	while(!(cin>>tempNode->num2))
+	{
+		cin.clear();
+		cin.sync();
+		cout<<"Error inputting num2, try again: ";
+	}
+	cout<<"Enter num3: ";
+	while(!(cin>>tempNode->num3))
+	{
+		cin.clear();
+		cin.sync();
+		cout<<"Error inputting num3, try again: ";
+	}
+	tempNode->next = nullptr;
+	return tempNode;
+}

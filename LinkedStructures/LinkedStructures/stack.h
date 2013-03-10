@@ -19,6 +19,7 @@ first           bool		    used to populate first node before generating new node
 Name              Return    Description; Parameter description
 --------------------------------------------------------------------------------------------
 Stack()           none      default constructor, initializes stack   
+makeNode()        node     creates and returns a single node with filled values
 pop()             void      removes first node from the stack
 list()            void      lists data for each node in the stack
 ~Stack()          none      successively deletes nodes before closing an instance of the class
@@ -50,15 +51,14 @@ struct node
 
 class Stack
 {
-	private:
+	protected:
 		node* head;
-		node* current;
-		bool first;
 	public:
 		Stack();
+		node* makeNode();
 		void pop();
-		Stack& operator +(node);
-		Stack& operator +=(node);
+		Stack& operator +(node*);
+		Stack& operator +=(node*);
 		friend ostream& operator<<(ostream& , const Stack&);
 		~Stack();
 };
