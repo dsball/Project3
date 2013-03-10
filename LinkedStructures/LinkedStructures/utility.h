@@ -9,10 +9,20 @@ none
 --- Functions ---
 Name                            Return    Description; Parameter description
 --------------------------------------------------------------------------------------------
-pause()                         void      replace system("PAUSE") with non-system function call
+clearScreen()                  void      replace system("CLS") with non-system function call
     no params
 
-printFile(string)               void      opens a file and prints it with fileToString()
+pause()                        void      replace system("PAUSE") with non-system function call
+    no params
+
+colorset()                     void      sets background and foreground color in console
+    WORD    text color(0-15) + bgcolor((0-15)*16)
+
+cursorpos                      void      move cursor to x y coord in console
+	int     x coord 
+	int     y coord
+
+printFile(string)              void      opens a file and prints it with fileToString()
     string: relative path of file being printed
 
 fileToString(ifstream &inFile)  void      stores an ifstream in a string and returns it
@@ -28,6 +38,7 @@ fileToString(ifstream &inFile)  void      stores an ifstream in a string and ret
 #include<fstream>
 #include<vector>
 #include<windows.h>
+#include<stdio.h>
 
 using std::cout;
 using std::cin;
@@ -45,5 +56,9 @@ using std::istream;
 void pause();
 bool printFile(string);
 string fileToString(ifstream&);
+void cursorpos( int, int);
+void screensaver();
+void colorset(WORD);
+void clearScreen();
 
 #endif

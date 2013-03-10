@@ -13,13 +13,13 @@
   <ItemGroup>
     <ClCompile Include="driver.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="queue.cpp" />
     <ClCompile Include="stack.cpp" />
-    <ClCompile Include="uimanip.cpp" />
     <ClCompile Include="utiliity.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="uimanip.h" />
     <ClInclude Include="menu.h" />
+    <ClInclude Include="queue.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
